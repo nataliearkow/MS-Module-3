@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Random Variable Function
 function randomInt(min, max) {
   if (!max) {
     max = min
@@ -16,17 +17,19 @@ function getRandomItem(list) {
 
 function generatePassword() {
 
+ // First Pop Up Question for User //
   while (true) {
 
     var userInput = window.prompt("How long do you want your password to be?")
     
-    // User Exited the Prompt //
+ // User Exited the Prompt //
     if (userInput === null) {
       return
     }
     
     var passwordLength = parseInt(userInput)
-    
+ 
+ // User must enter a number between 8 - 128 or else invalid //
     if (isNaN(passwordLength)) {
       window.alert("Please Enter a Number!")
   } else if (passwordLength < 8 || passwordLength > 128) {
@@ -34,14 +37,15 @@ function generatePassword() {
   } else {
     break
   }
-
 }
 
+ // Questions for User //
   var userWantsNumbers = window.confirm("Would you like to include numbers in your password?")
   var userWantsSymbols = window.confirm("Would you like to include symbols in your password?")
   var userWantsLowercase = window.confirm("Would you like to include lowercase letters in your password?")
   var userWantsUppercase = window.confirm("Would you like to include uppercase letters in your password?")
 
+ // Potential Variables for Password //
   var numberlist = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
   var symbollist = ["!", "@", "#", "$", "%", "&", "*"]
   var lowercaselist = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -53,6 +57,7 @@ function generatePassword() {
     uppercaselist = lowercaselist[i].toUpperCase()
   }
 
+ // User can select numbers, symbols, lowercase, and uppercase values in password if desired //
   if (userWantsNumbers === true) {
     optionsCart.push(numberlist)
   }
@@ -75,6 +80,7 @@ function generatePassword() {
 
   var generatePassword = ""
 
+ // Random Variables Chosen //
   for (var i = 0; i < passwordLength; i++) {
     var randomList = getRandomItem(optionsCart)
     var randomChar = getRandomItem(randomList)
