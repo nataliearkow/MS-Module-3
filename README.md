@@ -36,3 +36,6 @@ Went through Acceptance Criteria and added necessary elements
 
 # Photo of Finished Code
 <img width="1440" alt="Screen Shot 2022-08-04 at 7 48 07 PM" src="https://user-images.githubusercontent.com/109115351/182975366-e179896b-1e0e-4e7c-9ab1-d12228ef4ab1.png">
+
+# Link
+https://nataliearkow.github.io/MS-Module-3/
